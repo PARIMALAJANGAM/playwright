@@ -11,7 +11,7 @@ test("Login demo", async ()=>{
 
 //const newContext = await browser.newContext()
 
-  //const page1 = await context.newPage();
+  const page1 = await context.newPage();
   await page.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
   
   await page.locator('[placeholder="E-mail Address"]').click();
@@ -27,5 +27,6 @@ test("Login demo", async ()=>{
   await expect(page).toHaveURL("https://ecommerce-playground.lambdatest.io/index.php?route=account/edit");
   await page.hover("//span[text()[normalize-space()='My account']]");
   await page.locator("//span[text()[normalize-space()='Logout']]").click();
+  
   await expect(page).toHaveURL("https://ecommerce-playground.lambdatest.io/index.php?route=account/logout");
 })
