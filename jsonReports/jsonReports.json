@@ -23,32 +23,6 @@
           "**/?(*.)@(spec|test).*"
         ],
         "timeout": 30000
-      },
-      {
-        "outputDir": "C:/Users/Parimala.Jangam/Desktop/Playwright_typescript/playwright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "C:/Users/Parimala.Jangam/Desktop/Playwright_typescript/playwright/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/?(*.)@(spec|test).*"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "C:/Users/Parimala.Jangam/Desktop/Playwright_typescript/playwright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "id": "webkit",
-        "name": "webkit",
-        "testDir": "C:/Users/Parimala.Jangam/Desktop/Playwright_typescript/playwright/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/?(*.)@(spec|test).*"
-        ],
-        "timeout": 30000
       }
     ],
     "reporter": [
@@ -84,14 +58,14 @@
   },
   "suites": [
     {
-      "title": "day01\\basicInteractions.test.ts",
-      "file": "day01/basicInteractions.test.ts",
+      "title": "day01\\dropdown.test.ts",
+      "file": "day01/dropdown.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "",
-          "ok": true,
+          "title": "Bootstap",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -103,108 +77,41 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 4101,
-                  "errors": [],
-                  "stdout": [
+                  "status": "timedOut",
+                  "duration": 30012,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
                     {
-                      "text": "\n"
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
                     },
                     {
-                      "text": "Please enter your Message\n"
+                      "location": {
+                        "file": "C:\\Users\\Parimala.Jangam\\Desktop\\Playwright_typescript\\playwright\\tests\\day01\\dropdown.test.ts",
+                        "column": 12,
+                        "line": 32
+                      },
+                      "message": "Error: locator.click: Target closed\n=========================== logs ===========================\nwaiting for locator('xpath=//ul[@id=\\'select2-country-results\\']').filter({ has: locator('li').filter({ hasText: 'American Samoa' }) })\n============================================================\n\n\u001b[90m   at \u001b[39mday01\\dropdown.test.ts:32\n\n\u001b[0m \u001b[90m 30 |\u001b[39m             hasText\u001b[33m:\u001b[39m \u001b[32m\"American Samoa\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m             })\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m         })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m4000\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at C:\\Users\\Parimala.Jangam\\Desktop\\Playwright_typescript\\playwright\\tests\\day01\\dropdown.test.ts:32:12\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - locator.click at tests\\day01\\dropdown.test.ts:32:12\n"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-04-17T04:26:22.550Z",
+                  "startTime": "2023-04-17T12:51:30.602Z",
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "bcdbf9ca82accf6e0dd0-54dc1be6f08dd67a1bb1",
-          "file": "day01/basicInteractions.test.ts",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 3998,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "Please enter your Message\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-17T04:26:22.587Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "bcdbf9ca82accf6e0dd0-af8174c0d230e3a9dc6f",
-          "file": "day01/basicInteractions.test.ts",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 6509,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "Please enter your Message\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-17T04:26:22.598Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "bcdbf9ca82accf6e0dd0-bdb04b64e18420d48d32",
-          "file": "day01/basicInteractions.test.ts",
-          "line": 3,
-          "column": 5
+          "id": "159efb765ab90d609631-33f0d23183b7b23a12d2",
+          "file": "day01/dropdown.test.ts",
+          "line": 25,
+          "column": 6
         }
       ]
     }
